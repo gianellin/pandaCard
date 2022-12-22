@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Panda List</h3>
+
+    
+    {% for panda in pandas %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ panda.name }}</span>
+            <p>Type: {{ panda.type }} </p>
+            <p>Description: {{ panda.description }}</p>
+            <p>Diet: {{ panda.diet }}</p>
+            <p>Origin: {{ panda.origin }}</p>
+            <p>Weight: {{ panda.weight }}</p>
+            
+
+            
+            {% if panda.age > 0 %}
+                 <p>Age: {{ panda.age }}</p>
+                
+            {% endif %}
+                
+
+        </div>
+    </div>
+    {% endfor %}
+        
+
+    
+{% endblock %}
